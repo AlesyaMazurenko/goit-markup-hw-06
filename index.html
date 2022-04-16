@@ -475,20 +475,24 @@
           <h3 class="footer-title">Подпишитесь на рассылку</h3>
 
           <div class="subscribe-wrapper">
-          <label for="e-mail" class="sub-input">
-            <input name="email" type="email" placeholder="E-mail" class="footer-sub-input">
-          </label>
+            <form class="sub-input">
+                 <!-- <label for="subscr-email" class="sub-input"> -->
+            <input name="email" type="email" id="subscr-email" placeholder="E-mail" class="footer-sub-input">
+          <!-- </label> -->
+          
           <button type="submit" class="button primary footer-sub-btn">
             <span>Подписаться</span>
             <svg class="footer-sub-icon" width="24" height="24">
               <use href="./images/icons.svg#icon-send"></use>
             </svg>
           </button>
+          </form>
+       
           </div>
           
         </div>
       </div>
-      </div>
+      <!-- </div> -->
     </footer>
 
    <!-- модальное окно -->
@@ -496,7 +500,7 @@
      <div class="modal">
 
       <button class="modal-clos-btn" type="button" data-modal-close>
-        <svg class="close" width="30px" height="40px">
+        <svg class="close-icon" width="30px" height="40px">
           <use href="./images/icons.svg#close"></use>
         </svg>
       </button>
@@ -506,8 +510,8 @@
 
       <label for="name" class="modal-label">
         Имя              
-        <input type="text" name="name" minlength="3" class="modal-input"> 
-        <span  class="input-icon">
+        <input type="text" name="name" id="name" minlength="3" class="modal-input"> 
+        <span class="input-icon">
           <svg  width="18px" height="18px">
             <use href="./images/icons.svg#icon-person"></use>
           </svg>
@@ -517,7 +521,7 @@
          
       <label for="tel" class="modal-label">
         Телефон     
-        <input type="tel" name="tel" class="modal-input">
+        <input type="tel" name="tel" id="tel" class="modal-input">
               <span class="input-icon">
                 <svg width="18px" height="18px">
                   <use href="./images/icons.svg#icon-phone"></use>
@@ -527,7 +531,7 @@
 
       <label for="email" class="modal-label">
         Почта 
-        <input type="email" name="email" class="modal-input">
+        <input type="email" name="email" id="email" class="modal-input">
           <span class="input-icon">
             <svg width="18px" height="18px">
               <use href="./images/icons.svg#icon-email"></use>
@@ -537,7 +541,7 @@
 
      <label for="comment" class="modal-label">
        Комментарий
-       <textarea type="text" name="comment" placeholder="Введите текст" rows="5" class="modal-textarea"></textarea>
+       <textarea name="comment" id="comment" placeholder="Введите текст" rows="5" class="modal-textarea"></textarea>
      </label>  
     
 

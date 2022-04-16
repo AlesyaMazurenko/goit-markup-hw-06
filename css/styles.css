@@ -618,17 +618,22 @@ div.card-content {
 .subscribe-wrapper {
   display: flex;
   align-items: baseline;
+  width: 100%;
 }
 
 .sub-input {
   display: block;
-  width: calc(100% - 212px);
-  margin-right: 12px;
+  flex-grow: 2;
+  /* width: calc(100% - 212px); */
+
   background-color: var(--accent-bg-color);
 }
 
 .footer-sub-input {
-  width: 100%;
+  display: inline-block;
+  width: calc(100% - 216px);
+  /* flex-grow: 2; */
+
   background-color: var(--accent-bg-color);
 
   font-size: 16px;
@@ -636,7 +641,7 @@ div.card-content {
   padding: 15px;
   margin-top: 20px;
   color: var(--basic-text-color);
-  background-color: inherit;
+  margin-right: 12px;
 
   outline: transparent;
 
@@ -645,7 +650,7 @@ div.card-content {
 }
 
 .footer-subscribe .footer-sub-btn {
-  display: block;
+  /* display: block; */
   position: relative;
 
   width: 200px;
@@ -855,17 +860,27 @@ div.card-content {
   box-sizing: border-box;
   border-radius: 50%;
   cursor: pointer;
+  background-color: var(--main-white-color);
 }
 
-.close {
+.close-icon {
   position: absolute;
   top: 5px;
   right: -7px;
+
+  fill: #000000;
+
+  transition: fill var(--cubic);
+}
+
+.modal-clos-btn:hover .close-icon,
+.modal-clos-btn:focus .close-icon {
+  fill: var(--main-blue-color);
 }
 
 .modal-form {
   display: block;
-  margin: 40px;
+  padding: 40px;
 }
 
 .modal-title {
@@ -907,6 +922,7 @@ div.card-content {
   padding-left: 42px;
   margin-top: 4px;
   margin-bottom: 10px;
+  outline: transparent;
 
   transition: border-color var(--cubic);
 }
@@ -950,6 +966,7 @@ div.card-content {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  outline: transparent;
 
   color: rgba(117, 117, 117, 0.5);
   font-size: 14px;
@@ -966,6 +983,11 @@ div.card-content {
 .modal-textarea:hover,
 .modal-textarea:focus {
   border-color: var(--main-blue-color);
+}
+
+.modal-label.chek {
+  display: flex;
+  justify-content: center;
 }
 
 .chekbox {
